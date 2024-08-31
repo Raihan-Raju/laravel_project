@@ -21,6 +21,12 @@ class CostController extends Controller
             'note' => 'required|max:255|string',
             'is_active' => 'sometimes',
         ]);
-        Cost::create();
+        Cost::create([
+            'name'=> $request->name,
+            'quantity'=> $request->quantity,
+            'taka'=> $request->taka,
+            'is_active'=> $request->is_active == true ? 1:0,
+        ]);
+        return redirect('create')->with('status', 'cost created successfully');
     }
 }
