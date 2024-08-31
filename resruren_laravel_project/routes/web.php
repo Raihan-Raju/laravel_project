@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('addcost',[App\Http\Controllers\CostController::class, 'cost']);
+Route::get('create',[App\Http\Controllers\CostController::class, 'create']);
+Route::post('create',[App\Http\Controllers\CostController::class, 'store']);
+
+
 Route::get('/', function () {
     return view('masteruser');
 });
@@ -70,9 +75,9 @@ Route::get('/managestaff', function () {
 Route::get('/customermanage', function () {
     return view('admin_pages.customer_manage.customermanage');
 });
-Route::get('/addcost', function () {
-    return view('admin_pages.cost.addcost');
-});
+// Route::get('/addcost', function () {
+//     return view('admin_pages.cost.addcost');
+// });
 Route::get('/managecost', function () {
     return view('admin_pages.cost.managecost');
 });

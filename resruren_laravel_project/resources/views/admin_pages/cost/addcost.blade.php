@@ -33,15 +33,16 @@
                     <div class="card-title">Total-Cost</div>
                   </div>
                   <div class="card-body">
-                  <form action="" method="post" class="form-control">
+             <form action="{{url('create')}}" method="post" class="form-control">
+              @csrf
                   <div class="row">
                       <div class="col-md-12 col-lg-12">
                         <div class="form-group">
-                          <label for="email2">Cost Name</label>
+                          <label for="cname">Cost Name</label>
                           <input
-                            type="email"
+                            type="text"
                             class="form-control"
-                            id="email2"
+                            id="cname"
                             placeholder="Enter Name of Cost"
                           />
                           <small id="emailHelp2" class="form-text text-muted"

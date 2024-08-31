@@ -70,6 +70,8 @@
   <div class="row">
           <!-- customer details content -->
        <form action="" method="post" class="form-control">
+       
+
            <div class="row col col-md-12">
             <div class="col col-md-3 form-group">
               <label class="font-weight-bold" for="customers_name">Customer Name :</label>
